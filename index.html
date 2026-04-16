@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- =========================
+   NAVBAR HTML
+========================= -->
+<nav class="navbar glass">
+  <div class="nav-left">
+    <h2 class="logo">UIForge</h2>
+
+    <input 
+      type="text" 
+      class="project-name" 
+      value="My Project"
+      placeholder="Project Name"
+    >
+  </div>
+
+  <div class="nav-center">
+    <button class="nav-btn">
+      👁️ Preview
+    </button>
+    <button class="nav-btn">
+      ⬇️ Export
+    </button>
+    <button class="nav-btn primary">
+      🚀 Publish
+    </button>
+  </div>
+
+  <div class="nav-right">
+    <img 
+      src="https://i.pravatar.cc/40" 
+      alt="profile" 
+      class="avatar"
+    >
+  </div>
+
+</nav>
+
+
+
+<!-- =========================
+   LEFT SIDEBAR (ELEMENTS PANEL)
+========================= -->
+<aside class="sidebar glass">
+  <h3 class="sidebar-title">Elements</h3>
+
+  <!-- BASIC -->
+  <div class="sidebar-section">
+    <p class="section-title">Basic</p>
+
+    <div class="element" draggable="true" data-type="text">
+      <span>🅣</span> Text
+    </div>
+
+    <div class="element" draggable="true" data-type="image">
+      <span>🖼️</span> Image
+    </div>
+
+    <div class="element" draggable="true" data-type="button">
+      <span>🔘</span> Button
+    </div>
+
+    <div class="element" draggable="true" data-type="container">
+      <span>⬛</span> Container
+    </div>
+  </div>
+
+  <!-- ADVANCED -->
+  <div class="sidebar-section">
+    <p class="section-title">Advanced</p>
+
+    <div class="element" draggable="true" data-type="navbar">
+      <span>📑</span> Navbar
+    </div>
+
+    <div class="element" draggable="true" data-type="card">
+      <span>🧾</span> Card
+    </div>
+
+    <div class="element" draggable="true" data-type="form">
+      <span>📋</span> Form
+    </div>
+  </div>
+</aside>
+
+<!-- =========================
+   CENTER CANVAS (MAIN AREA)
+========================= -->
+<main class="canvas" id="canvas">
+  <div class="canvas-inner" id="dropZone">
+    <!-- Elements will be dropped here -->
+  </div>
+</main>
+
+<!-- =========================
+   RIGHT SIDEBAR (PROPERTIES PANEL)
+========================= -->
+<aside class="properties glass" id="propertiesPanel">
+  <h3>Properties</h3>
+
+  <!-- LAYOUT -->
+  <div class="prop-section">
+    <p class="prop-title">Layout</p>
+
+    <label>Width</label>
+    <input type="number" id="prop-width">
+
+    <label>Height</label>
+    <input type="number" id="prop-height">
+
+    <label>Padding</label>
+    <input type="number" id="prop-padding">
+  </div>
+
+  <!-- STYLE -->
+  <div class="prop-section">
+    <p class="prop-title">Style</p>
+
+    <label>Color</label>
+    <input type="color" id="prop-color">
+
+    <label>Font Size</label>
+    <input type="number" id="prop-font">
+
+    <label>Border Radius</label>
+    <input type="number" id="prop-radius">
+  </div>
+
+  <!-- ADVANCED -->
+  <div class="prop-section">
+    <p class="prop-title">Advanced</p>
+
+    <label>Opacity</label>
+    <input type="range" id="prop-opacity" min="0" max="1" step="0.1">
+
+    <label>Shadow</label>
+    <input type="range" id="prop-shadow" min="0" max="50">
+  </div>
+</aside>
+
+<!-- =========================
+   BOTTOM BAR (LAYERS PANEL)
+========================= -->
+<div class="layers-bar glass" id="layersBar">
+  <div class="layers-header">Layers</div>
+  <div class="layers-list" id="layersList"></div>
+</div>
+
+<script src="script.js"></script>
+    
+</body>
+</html>
