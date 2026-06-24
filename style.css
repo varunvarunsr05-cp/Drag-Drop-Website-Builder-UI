@@ -471,3 +471,183 @@ input, textarea {
   background: #6366f1;
   color: #fff;
 }
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLETS */
+@media (max-width: 1024px) {
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .canvas {
+    margin-left: 240px;
+  }
+
+  .properties {
+    width: 250px;
+  }
+
+  .layers-bar {
+    left: 250px;
+    right: 270px;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .project-name {
+    width: 180px;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    position: relative;
+    width: calc(100% - 20px);
+    height: auto;
+    top: 0;
+    margin: 10px;
+  }
+
+  /* CANVAS */
+  .canvas {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .canvas-inner {
+    height: 60vh;
+  }
+
+  /* PROPERTIES */
+  .properties {
+    position: relative;
+    width: calc(100% - 20px);
+    height: auto;
+    top: 0;
+    right: auto;
+    margin: 10px;
+  }
+
+  /* LAYERS */
+  .layers-bar {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: calc(100% - 20px);
+    margin: 10px;
+    height: auto;
+    max-height: 220px;
+  }
+
+  /* FLEX HELPERS */
+  .flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* BUTTONS */
+  .btn,
+  .nav-btn {
+    width: 100%;
+  }
+
+  /* CARDS */
+  .card {
+    padding: 16px;
+  }
+
+  /* INPUTS */
+  input,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .project-name {
+    width: 140px;
+    font-size: 12px;
+  }
+
+  .nav-center {
+    gap: 8px;
+  }
+
+  .nav-btn {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+
+  .properties {
+    padding: 15px;
+  }
+
+  .canvas {
+    padding: 5px;
+  }
+
+  .canvas-inner {
+    height: 50vh;
+  }
+
+  .layers-bar {
+    max-height: 180px;
+  }
+
+  .element {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .layer-item {
+    font-size: 12px;
+  }
+}
+
+
+/* EXTRA SAFETY */
+img,
+canvas,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
